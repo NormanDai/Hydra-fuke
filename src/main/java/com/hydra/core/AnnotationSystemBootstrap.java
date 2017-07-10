@@ -32,7 +32,7 @@ public class AnnotationSystemBootstrap extends AbstractSystemBootstrap{
     void initialize() {
         P.println("AnnotationSystemBootstrap  initialize");
 
-        if(StringUtil.isNotEmpty(scanPath)){// from spring
+        if(StringUtil.isNotEmpty(scanPath)){// from local
             AnnotationTaskConfig config = AnnotationTaskConfig.getInstance();
             List<Class<?>> classes = PackageScanner.getClasses(scanPath);
             for(Class clazz : classes){
